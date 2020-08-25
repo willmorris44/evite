@@ -37,6 +37,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		56DAA30E24F5985900A17195 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E4D990C624F593E5001B1C76 /* AppDelegate.swift */,
+				E4D990C824F593E5001B1C76 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		56DAA30F24F5987500A17195 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E4D990CC24F593E9001B1C76 /* Assets.xcassets */,
+				E4D990D124F593E9001B1C76 /* LaunchScreen.storyboard */,
+				E4D990D424F593E9001B1C76 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		56DAA31024F5988300A17195 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E4D990CA24F593E5001B1C76 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		56DAA31124F5988A00A17195 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		56DAA31224F598BD00A17195 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		56DAA31324F598D100A17195 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		E4D990BA24F593E5001B1C76 = {
 			isa = PBXGroup;
 			children = (
@@ -56,12 +104,12 @@
 		E4D990C524F593E5001B1C76 /* Evite */ = {
 			isa = PBXGroup;
 			children = (
-				E4D990C624F593E5001B1C76 /* AppDelegate.swift */,
-				E4D990C824F593E5001B1C76 /* SceneDelegate.swift */,
-				E4D990CA24F593E5001B1C76 /* ContentView.swift */,
-				E4D990CC24F593E9001B1C76 /* Assets.xcassets */,
-				E4D990D124F593E9001B1C76 /* LaunchScreen.storyboard */,
-				E4D990D424F593E9001B1C76 /* Info.plist */,
+				56DAA30F24F5987500A17195 /* Resources */,
+				56DAA30E24F5985900A17195 /* App */,
+				56DAA31324F598D100A17195 /* Helpers */,
+				56DAA31224F598BD00A17195 /* Models */,
+				56DAA31024F5988300A17195 /* Views */,
+				56DAA31124F5988A00A17195 /* ViewModels */,
 				E4D990CE24F593E9001B1C76 /* Preview Content */,
 			);
 			path = Evite;
