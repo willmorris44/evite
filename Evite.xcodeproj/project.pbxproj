@@ -17,6 +17,7 @@
 		E4D990CD24F593E9001B1C76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4D990CC24F593E9001B1C76 /* Assets.xcassets */; };
 		E4D990D024F593E9001B1C76 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4D990CF24F593E9001B1C76 /* Preview Assets.xcassets */; };
 		E4D990D324F593E9001B1C76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4D990D124F593E9001B1C76 /* LaunchScreen.storyboard */; };
+		E4D990DB24FD75CE001B1C76 /* SmallCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D990DA24FD75CE001B1C76 /* SmallCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		E4D990CF24F593E9001B1C76 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E4D990D224F593E9001B1C76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E4D990D424F593E9001B1C76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4D990DA24FD75CE001B1C76 /* SmallCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 			children = (
 				E4D990CA24F593E5001B1C76 /* ContentView.swift */,
 				56DAA31424F59BB400A17195 /* BigCardView.swift */,
+				E4D990DA24FD75CE001B1C76 /* SmallCardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				E4D990C724F593E5001B1C76 /* AppDelegate.swift in Sources */,
 				56DAA31724F59C6200A17195 /* Invite.swift in Sources */,
 				E4D990C924F593E5001B1C76 /* SceneDelegate.swift in Sources */,
+				E4D990DB24FD75CE001B1C76 /* SmallCardView.swift in Sources */,
 				E4D990CB24F593E5001B1C76 /* ContentView.swift in Sources */,
 				56DAA31524F59BB400A17195 /* BigCardView.swift in Sources */,
 				56DAA31B24F5A10300A17195 /* User.swift in Sources */,
