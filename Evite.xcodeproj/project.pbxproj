@@ -18,6 +18,11 @@
 		E4D990D024F593E9001B1C76 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4D990CF24F593E9001B1C76 /* Preview Assets.xcassets */; };
 		E4D990D324F593E9001B1C76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4D990D124F593E9001B1C76 /* LaunchScreen.storyboard */; };
 		E4D990DB24FD75CE001B1C76 /* SmallCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D990DA24FD75CE001B1C76 /* SmallCardView.swift */; };
+		E4D990E124FEEDB6001B1C76 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D990E024FEEDB6001B1C76 /* ProfileView.swift */; };
+		E4D990E324FEEDD2001B1C76 /* CreateEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D990E224FEEDD2001B1C76 /* CreateEventView.swift */; };
+		E4D990E524FEEDE5001B1C76 /* MainFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D990E424FEEDE5001B1C76 /* MainFeedView.swift */; };
+		E4D990E724FEEE75001B1C76 /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D990E624FEEE75001B1C76 /* NotificationsView.swift */; };
+		E4D990E924FEEEB0001B1C76 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D990E824FEEEB0001B1C76 /* SearchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +39,11 @@
 		E4D990D224F593E9001B1C76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E4D990D424F593E9001B1C76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4D990DA24FD75CE001B1C76 /* SmallCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallCardView.swift; sourceTree = "<group>"; };
+		E4D990E024FEEDB6001B1C76 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		E4D990E224FEEDD2001B1C76 /* CreateEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventView.swift; sourceTree = "<group>"; };
+		E4D990E424FEEDE5001B1C76 /* MainFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFeedView.swift; sourceTree = "<group>"; };
+		E4D990E624FEEE75001B1C76 /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
+		E4D990E824FEEEB0001B1C76 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +82,11 @@
 				E4D990CA24F593E5001B1C76 /* ContentView.swift */,
 				56DAA31424F59BB400A17195 /* BigCardView.swift */,
 				E4D990DA24FD75CE001B1C76 /* SmallCardView.swift */,
+				E4D990E024FEEDB6001B1C76 /* ProfileView.swift */,
+				E4D990E224FEEDD2001B1C76 /* CreateEventView.swift */,
+				E4D990E424FEEDE5001B1C76 /* MainFeedView.swift */,
+				E4D990E624FEEE75001B1C76 /* NotificationsView.swift */,
+				E4D990E824FEEEB0001B1C76 /* SearchView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -216,7 +231,12 @@
 				E4D990DB24FD75CE001B1C76 /* SmallCardView.swift in Sources */,
 				E4D990CB24F593E5001B1C76 /* ContentView.swift in Sources */,
 				56DAA31524F59BB400A17195 /* BigCardView.swift in Sources */,
+				E4D990E324FEEDD2001B1C76 /* CreateEventView.swift in Sources */,
+				E4D990E924FEEEB0001B1C76 /* SearchView.swift in Sources */,
+				E4D990E524FEEDE5001B1C76 /* MainFeedView.swift in Sources */,
+				E4D990E124FEEDB6001B1C76 /* ProfileView.swift in Sources */,
 				56DAA31B24F5A10300A17195 /* User.swift in Sources */,
+				E4D990E724FEEE75001B1C76 /* NotificationsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
