@@ -13,27 +13,27 @@ struct ContentView: View {
         TabView {
             MainFeedView()
                 .tabItem {
-                    Image(systemName: "house.fill")
+                    Icons.houseFill.image
             }
             
             SearchView()
                 .tabItem {
-                    Image(systemName: "magnifyingglass")
+                    Icons.magnifyingGlass.image
             }
             
             CreateEventView()
                 .tabItem {
-                    Image(systemName: "plus.circle")
+                    Icons.plusCircle.image
             }
             
             NotificationsView()
                 .tabItem {
-                    Image(systemName: "bell")
+                    Icons.bell.image
             }
             
             ProfileView()
                 .tabItem {
-                    Image(systemName: "person")
+                    Icons.person.image
             }
         }
     }

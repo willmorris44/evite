@@ -19,7 +19,7 @@ struct BigCardView: View {
                         .font(.title)
                     
                     HStack {
-                        Image(systemName: "calendar")
+                        Icons.calendar.image
                             .font(.subheadline)
                         
                         Text("July 14th 5:00-6:00pm")
@@ -28,7 +28,7 @@ struct BigCardView: View {
                     }
                     
                     HStack {
-                        Image(systemName: "dollarsign.circle")
+                        Icons.dollarsignCircle.image
                             .font(.subheadline)
                         
                         Text("25 Points")
@@ -37,7 +37,7 @@ struct BigCardView: View {
                     }
                     
                     HStack {
-                        Image(systemName: "location")
+                        Icons.location.image
                             .font(.subheadline)
                         
                         Text("1.2 miles away")
@@ -50,7 +50,7 @@ struct BigCardView: View {
                 .padding()
                 
                 VStack {
-                    Image(systemName: "ellipsis")
+                    Icons.elipses.image
                         .font(.headline)
                         .padding(.top, 10)
                     Spacer()
@@ -60,14 +60,14 @@ struct BigCardView: View {
             }
             
             HStack {
-                Image(systemName: "person.crop.circle.fill")
+                Icons.personCircle.image
                     .font(.title)
                 
-                Image(systemName: "person.crop.circle.fill")
+                Icons.personCircle.image
                     .font(.title)
                     .padding(.leading, -10)
                 
-                Image(systemName: "person.crop.circle.fill")
+                Icons.personCircle.image
                     .font(.title)
                     .padding(.leading, -10)
                 
@@ -76,12 +76,12 @@ struct BigCardView: View {
                     .font(.subheadline)
                 Spacer()
             }
-        .padding()
+            .padding()
             
         }
         .frame(maxWidth: .infinity)
         .frame(height: 225)
-        .background(Color(.white))
+        .background(Color(.primary))
         .cornerRadius(20)
         .shadow(radius: 5)
         .padding(.horizontal)

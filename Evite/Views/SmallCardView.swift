@@ -21,14 +21,14 @@ struct SmallCardView: View {
                 .font(.subheadline)
             
             HStack {
-                Image(systemName: "person.crop.circle.fill")
+                Icons.personCircle.image
                     .font(.title)
                 
-                Image(systemName: "person.crop.circle.fill")
+                Icons.personCircle.image
                     .font(.title)
                     .padding(.leading, -20)
                 
-                Image(systemName: "person.crop.circle.fill")
+                Icons.personCircle.image
                     .font(.title)
                     .padding(.leading, -20)
                 
@@ -42,14 +42,14 @@ struct SmallCardView: View {
                 
             }
             .frame(width: 100)
-            .foregroundColor(.white)
-            .background(Color(.magenta))
+            .foregroundColor(.primary)
+            .background(Color(.secondary))
             .cornerRadius(5)
             
         }
         .frame(width: 125)
         .frame(height: 150)
-        .background(Color(.white))
+        .background(Color(.primary))
         .cornerRadius(10)
         .shadow(radius: 5)
         .padding(.horizontal)

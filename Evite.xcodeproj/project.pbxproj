@@ -11,6 +11,8 @@
 		56DAA31724F59C6200A17195 /* Invite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DAA31624F59C6200A17195 /* Invite.swift */; };
 		56DAA31924F59CF900A17195 /* DateFormatter+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DAA31824F59CF800A17195 /* DateFormatter+.swift */; };
 		56DAA31B24F5A10300A17195 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DAA31A24F5A10300A17195 /* User.swift */; };
+		56DAA31F250013BE00A17195 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DAA31E250013BD00A17195 /* Icons.swift */; };
+		56DAA32125001AC600A17195 /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DAA32025001AC600A17195 /* Color+.swift */; };
 		E4D990C724F593E5001B1C76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D990C624F593E5001B1C76 /* AppDelegate.swift */; };
 		E4D990C924F593E5001B1C76 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D990C824F593E5001B1C76 /* SceneDelegate.swift */; };
 		E4D990CB24F593E5001B1C76 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D990CA24F593E5001B1C76 /* ContentView.swift */; };
@@ -30,6 +32,8 @@
 		56DAA31624F59C6200A17195 /* Invite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Invite.swift; sourceTree = "<group>"; };
 		56DAA31824F59CF800A17195 /* DateFormatter+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+.swift"; sourceTree = "<group>"; };
 		56DAA31A24F5A10300A17195 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		56DAA31E250013BD00A17195 /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
+		56DAA32025001AC600A17195 /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
 		E4D990C324F593E5001B1C76 /* Evite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Evite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4D990C624F593E5001B1C76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4D990C824F593E5001B1C76 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,13 +84,8 @@
 			isa = PBXGroup;
 			children = (
 				E4D990CA24F593E5001B1C76 /* ContentView.swift */,
-				56DAA31424F59BB400A17195 /* BigCardView.swift */,
-				E4D990DA24FD75CE001B1C76 /* SmallCardView.swift */,
-				E4D990E024FEEDB6001B1C76 /* ProfileView.swift */,
-				E4D990E224FEEDD2001B1C76 /* CreateEventView.swift */,
-				E4D990E424FEEDE5001B1C76 /* MainFeedView.swift */,
-				E4D990E624FEEE75001B1C76 /* NotificationsView.swift */,
-				E4D990E824FEEEB0001B1C76 /* SearchView.swift */,
+				56DAA31C250012B100A17195 /* TabBarViews */,
+				56DAA31D250012FA00A17195 /* CardViews */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -110,9 +109,32 @@
 		56DAA31324F598D100A17195 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				56DAA31E250013BD00A17195 /* Icons.swift */,
 				56DAA31824F59CF800A17195 /* DateFormatter+.swift */,
+				56DAA32025001AC600A17195 /* Color+.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		56DAA31C250012B100A17195 /* TabBarViews */ = {
+			isa = PBXGroup;
+			children = (
+				E4D990E424FEEDE5001B1C76 /* MainFeedView.swift */,
+				E4D990E824FEEEB0001B1C76 /* SearchView.swift */,
+				E4D990E224FEEDD2001B1C76 /* CreateEventView.swift */,
+				E4D990E624FEEE75001B1C76 /* NotificationsView.swift */,
+				E4D990E024FEEDB6001B1C76 /* ProfileView.swift */,
+			);
+			name = TabBarViews;
+			sourceTree = "<group>";
+		};
+		56DAA31D250012FA00A17195 /* CardViews */ = {
+			isa = PBXGroup;
+			children = (
+				56DAA31424F59BB400A17195 /* BigCardView.swift */,
+				E4D990DA24FD75CE001B1C76 /* SmallCardView.swift */,
+			);
+			name = CardViews;
 			sourceTree = "<group>";
 		};
 		E4D990BA24F593E5001B1C76 = {
@@ -224,6 +246,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56DAA31F250013BE00A17195 /* Icons.swift in Sources */,
+				56DAA32125001AC600A17195 /* Color+.swift in Sources */,
 				56DAA31924F59CF900A17195 /* DateFormatter+.swift in Sources */,
 				E4D990C724F593E5001B1C76 /* AppDelegate.swift in Sources */,
 				56DAA31724F59C6200A17195 /* Invite.swift in Sources */,
