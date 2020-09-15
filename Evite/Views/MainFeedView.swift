@@ -11,6 +11,7 @@ import SwiftUI
 struct MainFeedView: View {
     var body: some View {
         GeometryReader { fullView in
+            ScrollView(.vertical, showsIndicators: false) {
             VStack {
                 HStack {
                     Text("Happening Now")
@@ -24,12 +25,12 @@ struct MainFeedView: View {
                     HStack(spacing: 20) {
                         StoryCardView()
                             .padding(.vertical)
-                            .padding(.leading)
                         StoryCardView()
                         StoryCardView()
                         StoryCardView()
                         StoryCardView()
                     }
+                    .padding(.horizontal)
                 }
                 
                 HStack {
@@ -40,7 +41,6 @@ struct MainFeedView: View {
                 }
                 .padding(.horizontal)
                 
-                ScrollView(.vertical, showsIndicators: false) {
                     BigCardView()
                         .padding(.vertical)
                     BigCardView()

@@ -9,44 +9,37 @@
 import SwiftUI
 
 extension View {
-    func stacked(at position: Int, in total: Int, with proxy: GeometryProxy) -> some View {
-        var offset = CGFloat(position * 75)
-//        if offset > proxy.size.width - 50 {
-//            offset = 0
-//        }
+    func stacked(at position: Int, in total: Int) -> some View {
+        var offset = CGFloat(position * -75)
         return self.offset(CGSize(width: offset, height: 0)).zIndex(Double(-position))
     }
 }
 
 struct CalendarView: View {
     var body: some View {
-        GeometryReader { fullView in
-            ScrollView {
+            VStack {
                 ForEach((1..<10)) { i in
                     HStack {
                         HStack {
-                        Text("\(i)")
-                            .font(.largeTitle)
-                            .fontWeight(.semibold)
-                            .padding(.horizontal)
+                            Text("\(i)")
+                                .font(.largeTitle)
+                                .fontWeight(.semibold)
+                                .padding(.horizontal)
                         }
-                            //.layoutPriority(1)
+                        //.layoutPriority(1)
                         
-                        HStack {
-                            ScrollView(.horizontal) {
-                            ZStack {
-                                ForEach((0..<10)) { j in
-                                    SmallCardView()
-                                        .stacked(at: j, in: 9, with: fullView)
+                            ScrollView(.horizontal, showsIndicators: false) {
+                                HStack {
+                                    ForEach((0..<10)) { j in
+                                        SmallCardView()
+                                            //.stacked(at: j, in: 9)
                                     }
+                                }
+                                .padding(.vertical)
                             }
-                            }
-                        }
                         
-                        Spacer()
                     }
-                    .frame(maxWidth: fullView.size.width)
-                }
+                
             }
         }
     }
