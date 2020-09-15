@@ -21,12 +21,14 @@ struct MainFeedView: View {
                 .padding(.horizontal)
                 
                 ScrollView(.horizontal, showsIndicators: false) {
-                    HStack {
-                        SmallCardView()
+                    HStack(spacing: 20) {
+                        StoryCardView()
                             .padding(.vertical)
-                        SmallCardView()
-                        SmallCardView()
-                        SmallCardView()
+                            .padding(.leading)
+                        StoryCardView()
+                        StoryCardView()
+                        StoryCardView()
+                        StoryCardView()
                     }
                 }
                 

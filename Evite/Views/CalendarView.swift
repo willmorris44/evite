@@ -30,7 +30,7 @@ struct CalendarView: View {
                             .fontWeight(.semibold)
                             .padding(.horizontal)
                         }
-                            .layoutPriority(1)
+                            //.layoutPriority(1)
                         
                         HStack {
                             ScrollView(.horizontal) {
@@ -38,7 +38,7 @@ struct CalendarView: View {
                                 ForEach((0..<10)) { j in
                                     SmallCardView()
                                         .stacked(at: j, in: 9, with: fullView)
-                                }
+                                    }
                             }
                             }
                         }
