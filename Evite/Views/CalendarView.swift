@@ -18,10 +18,10 @@ extension View {
 struct CalendarView: View {
     var body: some View {
         VStack(spacing: 0) {
-            ForEach((1..<10)) { i in
+            ForEach(Date().thisWeek()) { date in
                 HStack {
                     HStack {
-                        Text("\(i)")
+                        Text("\(date.day)")
                             .font(.largeTitle)
                             .fontWeight(.semibold)
                             .padding(.horizontal)
