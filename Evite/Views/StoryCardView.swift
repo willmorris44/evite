@@ -9,12 +9,16 @@
 import SwiftUI
 
 struct StoryCardView: View {
+    @State var newPost = false
+    
     var body: some View {
         VStack {
             Image("party")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                .mask(Circle())
+                .clipShape(Circle())
+                .clipped()
+                .overlay(Circle().stroke(Color.orange, lineWidth: newPost ? 3 : 0))
                 .padding(.top)
             
             Text("Goodbye Party")

@@ -24,6 +24,17 @@ struct ProfileView: View {
                 }
             }
             .navigationBarTitle("Becky", displayMode: .inline)
+//            IOS 14
+//            .toolbar {
+//                ToolbarItem(placement: .principal) {
+//                    HStack {
+//                        Image(systemName: "sun.min.fill")
+//                        Text("Title")
+//                            .font(.headline)
+//                            .foregroundColor(.orange)
+//                    }
+//                }
+//            }
             //.navigationViewStyle(StackNavigationViewStyle())
         }
     }

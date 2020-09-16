@@ -16,23 +16,24 @@ struct SmallCardView: View {
                 .fontWeight(.bold)
                 .font(.headline)
                 .lineLimit(1)
+                .padding(.top)
             
             Text("25 Points")
-                .fontWeight(.semibold)
+                .fontWeight(.light)
                 .font(.subheadline)
             
             HStack {
                 Image("profile_pic_2")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
-                    .frame(maxWidth: 25, maxHeight: 25)
+                    .frame(maxWidth: 30, maxHeight: 30)
                     .clipShape(Circle())
                     .clipped()
                 
                 Image("profile_pic_3")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
-                    .frame(maxWidth: 25, maxHeight: 25)
+                    .frame(maxWidth: 30, maxHeight: 30)
                     .clipShape(Circle())
                     .clipped()
                     .padding(.leading, -20)
@@ -40,29 +41,34 @@ struct SmallCardView: View {
                 Image("profile_pic_4")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
-                    .frame(maxWidth: 25, maxHeight: 25)
+                    .frame(maxWidth: 30, maxHeight: 30)
                     .clipShape(Circle())
                     .clipped()
                     .padding(.leading, -20)
                 
                 Text("+ 3")
-                    .fontWeight(.semibold)
+                    .fontWeight(.light)
                     .font(.subheadline)
                     .lineLimit(1)
                     .layoutPriority(1)
             }
-            .padding()
+            .padding(.vertical)
             
             NavigationLink(destination: Text("hll"), isActive: $isShow) {
                 EmptyView()
             }
-            Button("Info") {
+            Button(action: {
                 self.isShow = true
+            }) {
+                Text("Info")
+                    .fontWeight(.semibold)
+                    .padding(.vertical, 5)
+                    .frame(width: 100)
+                    .foregroundColor(.primary)
+                    .background(Color(.secondary))
+                    .cornerRadius(5)
             }
-            .frame(width: 100)
-            .foregroundColor(.primary)
-            .background(Color(.secondary))
-            .cornerRadius(5)
+            .padding(.bottom)
             
         }
         .frame(width: 125)

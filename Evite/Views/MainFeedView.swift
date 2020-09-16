@@ -15,7 +15,7 @@ struct MainFeedView: View {
             VStack {
                 HStack {
                     Text("Happening Now")
-                        .font(.title)
+                        .font(.headline)
                         .fontWeight(.bold)
                     Spacer()
                 }
@@ -23,11 +23,11 @@ struct MainFeedView: View {
                 
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 20) {
-                        StoryCardView()
+                        StoryCardView(newPost: true)
                             .padding(.vertical)
                         StoryCardView()
-                        StoryCardView()
-                        StoryCardView()
+                        StoryCardView(newPost: true)
+                        StoryCardView(newPost: true)
                         StoryCardView()
                     }
                     .padding(.horizontal)

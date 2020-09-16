@@ -75,7 +75,7 @@ struct BigCardView: View {
                     .frame(maxWidth: 30, maxHeight: 30)
                     .clipShape(Circle())
                     .clipped()
-                    .padding(.leading, -10)
+                    .padding(.leading, -20)
                 
                 Image("profile_pic_4")
                     .resizable()
@@ -83,12 +83,13 @@ struct BigCardView: View {
                     .frame(maxWidth: 30, maxHeight: 30)
                     .clipShape(Circle())
                     .clipped()
-                    .padding(.leading, -10)
+                    .padding(.leading, -20)
                                 
                 Text("Brian, Will, Winston + 3 more")
                     .fontWeight(.semibold)
                     .font(.subheadline)
                     .layoutPriority(1)
+                
                 Spacer()
             }
             .padding()
