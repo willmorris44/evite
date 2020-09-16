@@ -11,35 +11,42 @@ import SwiftUI
 struct ProfileHeaderView: View {
     var body: some View {
         VStack(spacing: 10) {
-            Image(systemName: "person.circle")
-                .font(.largeTitle)
+            Image("profile_pic")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(maxWidth: 125, maxHeight: 125)
+                .clipShape(Circle())
+                .clipped()
             
-            Text("@user")
-                .fontWeight(.light)
+            Text("@becky_123")
+                .fontWeight(.ultraLight)
             
             HStack(spacing: 30) {
                 VStack {
                     Text("200")
                         .fontWeight(.semibold)
-                    Text("following")
+                    Text("Following")
                         .fontWeight(.light)
                         .font(.callout)
+                        .foregroundColor(.gray)
                 }
                 
                 VStack {
                     Text("300")
                         .fontWeight(.semibold)
-                    Text("followers")
+                    Text("Followers")
                         .fontWeight(.light)
                         .font(.callout)
+                        .foregroundColor(.gray)
                 }
                 
                 VStack {
                     Text("500")
                         .fontWeight(.semibold)
-                    Text("points")
+                    Text("Points")
                         .fontWeight(.light)
                         .font(.callout)
+                        .foregroundColor(.gray)
                 }
             }
         }

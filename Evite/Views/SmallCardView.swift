@@ -22,20 +22,34 @@ struct SmallCardView: View {
                 .font(.subheadline)
             
             HStack {
-                Icons.personCircle.image
-                    .font(.title)
+                Image("profile_pic_2")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(maxWidth: 25, maxHeight: 25)
+                    .clipShape(Circle())
+                    .clipped()
                 
-                Icons.personCircle.image
-                    .font(.title)
+                Image("profile_pic_3")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(maxWidth: 25, maxHeight: 25)
+                    .clipShape(Circle())
+                    .clipped()
                     .padding(.leading, -20)
                 
-                Icons.personCircle.image
-                    .font(.title)
+                Image("profile_pic_4")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(maxWidth: 25, maxHeight: 25)
+                    .clipShape(Circle())
+                    .clipped()
                     .padding(.leading, -20)
                 
                 Text("+ 3")
                     .fontWeight(.semibold)
                     .font(.subheadline)
+                    .lineLimit(1)
+                    .layoutPriority(1)
             }
             .padding()
             

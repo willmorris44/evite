@@ -11,8 +11,10 @@ import SwiftUI
 struct StoryCardView: View {
     var body: some View {
         VStack {
-            Image(systemName: "person.circle")
-                .font(.largeTitle)
+            Image("party")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .mask(Circle())
                 .padding(.top)
             
             Text("Goodbye Party")
@@ -20,7 +22,6 @@ struct StoryCardView: View {
                 .font(.footnote)
                 .lineLimit(1)
                 .padding(.horizontal)
-                .padding(.top)
             
             Text("9pm - 2am")
                 .fontWeight(.light)

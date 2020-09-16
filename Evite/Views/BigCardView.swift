@@ -49,31 +49,46 @@ struct BigCardView: View {
                 }
                 .padding()
                 
+                Spacer()
+                
                 VStack {
                     Icons.elipses.image
                         .font(.headline)
                         .padding(.top, 10)
+                        .padding(.trailing)
                     Spacer()
                 }
                 .padding()
-                Spacer()
             }
             
             HStack {
-                Icons.personCircle.image
-                    .font(.title)
+                Image("profile_pic_2")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(maxWidth: 30, maxHeight: 30)
+                    .clipShape(Circle())
+                    .clipped()
                 
-                Icons.personCircle.image
-                    .font(.title)
+                Image("profile_pic_3")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(maxWidth: 30, maxHeight: 30)
+                    .clipShape(Circle())
+                    .clipped()
                     .padding(.leading, -10)
                 
-                Icons.personCircle.image
-                    .font(.title)
+                Image("profile_pic_4")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(maxWidth: 30, maxHeight: 30)
+                    .clipShape(Circle())
+                    .clipped()
                     .padding(.leading, -10)
-                
+                                
                 Text("Brian, Will, Winston + 3 more")
                     .fontWeight(.semibold)
                     .font(.subheadline)
+                    .layoutPriority(1)
                 Spacer()
             }
             .padding()

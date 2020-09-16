@@ -11,18 +11,20 @@ import SwiftUI
 struct ProfileView: View {
     var body: some View {
         NavigationView {
-        GeometryReader { fullView in
-            ScrollView(.vertical, showsIndicators: true) {
-                VStack {
-                    ProfileHeaderView()
-                        .padding()
-                    
-                    Divider()
-                    
-                    CalendarView()
+            GeometryReader { fullView in
+                ScrollView(.vertical, showsIndicators: true) {
+                    VStack {
+                        ProfileHeaderView()
+                            .padding()
+                        
+                        Divider()
+                        
+                        CalendarView()
+                    }
                 }
             }
-        }
+            .navigationBarTitle("Becky", displayMode: .inline)
+            //.navigationViewStyle(StackNavigationViewStyle())
         }
     }
 }
