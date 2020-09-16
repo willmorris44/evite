@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct SmallCardView: View {
+    @State private var isShow: Bool = false
     var body: some View {
         VStack {
             Text("MGM Grand Party")
@@ -38,8 +39,11 @@ struct SmallCardView: View {
             }
             .padding()
             
+            NavigationLink(destination: Text("hll"), isActive: $isShow) {
+                EmptyView()
+            }
             Button("Info") {
-                
+                self.isShow = true
             }
             .frame(width: 100)
             .foregroundColor(.primary)
@@ -53,8 +57,8 @@ struct SmallCardView: View {
         .cornerRadius(10)
         .shadow(radius: 5)
         .padding(.horizontal)
+        }
         
-    }
 }
 
 struct SmallCardView_Previews: PreviewProvider {

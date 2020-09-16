@@ -10,12 +10,19 @@ import SwiftUI
 
 struct ProfileView: View {
     var body: some View {
-        VStack {
-            ProfileHeaderView()
-                .padding()
-            
-            CalendarView()
-            Spacer()
+        NavigationView {
+        GeometryReader { fullView in
+            ScrollView(.vertical, showsIndicators: true) {
+                VStack {
+                    ProfileHeaderView()
+                        .padding()
+                    
+                    Divider()
+                    
+                    CalendarView()
+                }
+            }
+        }
         }
     }
 }
