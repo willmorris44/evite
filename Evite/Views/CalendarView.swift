@@ -17,28 +17,28 @@ extension View {
 
 struct CalendarView: View {
     var body: some View {
-            VStack {
-                ForEach((1..<10)) { i in
+        VStack(spacing: 0) {
+            ForEach(Date().thisWeek()) { date in
+                HStack {
                     HStack {
-                        HStack {
-                            Text("\(i)")
-                                .font(.largeTitle)
-                                .fontWeight(.semibold)
-                                .padding(.horizontal)
-                        }
-                        //.layoutPriority(1)
-                        
-                            ScrollView(.horizontal, showsIndicators: false) {
-                                HStack {
-                                    ForEach((0..<10)) { j in
-                                        SmallCardView()
-                                            //.stacked(at: j, in: 9)
-                                    }
-                                }
-                                .padding(.vertical)
-                            }
-                        
+                        Text("\(date.day)")
+                            .font(.largeTitle)
+                            .fontWeight(.semibold)
+                            .padding(.horizontal)
                     }
+                    //.layoutPriority(1)
+                    
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack {
+                            ForEach((0..<10)) { j in
+                                SmallCardView()
+                                //.stacked(at: j, in: 9)
+                            }
+                        }
+                        .padding(.vertical)
+                    }
+                    
+                }
                 
             }
         }
