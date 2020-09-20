@@ -21,6 +21,10 @@ extension Color {
     static var highlights: Color  {
         return Color("highlights")
     }
+    
+    static var lightGray: Color {
+        return Color("lightGray")
+    }
 }
 
 extension UIColor {
@@ -34,5 +38,9 @@ extension UIColor {
     
     static var highlights: UIColor  {
         return UIColor(named: "highlights")!
+    }
+    
+    static var lightGray: UIColor {
+        return UIColor(named: "lightGray")!
     }
 }

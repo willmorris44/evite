@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct BigCardView: View {
+    @State private var showingSheet = false
     
     var body: some View {
         VStack {
@@ -53,9 +54,14 @@ struct BigCardView: View {
                 
                 VStack {
                     Icons.elipses.image
+                        .frame(width: 50, height: 30)
                         .font(.headline)
-                        .padding(.top, 10)
-                        .padding(.trailing)
+                        .onTapGesture {
+                            self.showingSheet = true
+                    }
+                    .actionSheet(isPresented: $showingSheet) {
+                        ActionSheet(title: Text("What do you want to do?"), message: Text("There's only one choice..."), buttons: [.default(Text("Dismiss Action Sheet"))])
+                    }
                     Spacer()
                 }
                 .padding()
@@ -84,7 +90,7 @@ struct BigCardView: View {
                     .clipShape(Circle())
                     .clipped()
                     .padding(.leading, -20)
-                                
+                
                 Text("Brian, Will, Winston + 3 more")
                     .fontWeight(.semibold)
                     .font(.subheadline)

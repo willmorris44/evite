@@ -20,6 +20,7 @@ enum Icons {
     case plusCircle
     case bell
     case person
+    case house
     
     var image: Image {
         switch self {
@@ -29,6 +30,7 @@ enum Icons {
         case .location: return Image(systemName: "location")
         case .elipses: return Image(systemName: "ellipsis")
         case .houseFill: return Image(systemName: "house.fill")
+        case .house: return Image(systemName: "house")
         case .magnifyingGlass: return Image(systemName: "magnifyingglass")
         case .plusCircle: return Image(systemName: "plus.circle")
         case .bell: return Image(systemName: "bell")

@@ -75,10 +75,9 @@ struct SmallCardView: View {
         .frame(height: 150)
         .background(Color(.primary))
         .cornerRadius(10)
-        .shadow(radius: 5)
+        .shadow(color: .lightGray, radius: 5)
         .padding(.horizontal)
-        }
-        
+    }
 }
 
 struct SmallCardView_Previews: PreviewProvider {

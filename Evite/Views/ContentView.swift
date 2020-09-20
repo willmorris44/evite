@@ -9,6 +9,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    init() {
+        let tabBarAppearance = UITabBarAppearance()
+        tabBarAppearance.configureWithOpaqueBackground()
+        tabBarAppearance.backgroundColor = .primary
+        UITabBar.appearance().standardAppearance = tabBarAppearance
+    }
+
     var body: some View {
         TabView {
             MainFeedView()
@@ -36,6 +44,7 @@ struct ContentView: View {
                     Icons.person.image
             }
         }
+        .accentColor(Color.secondary)
     }
 }
 
