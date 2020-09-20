@@ -14,55 +14,51 @@ struct ProfileHeaderView: View {
             Image("profile_pic")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                .frame(maxWidth: 125, maxHeight: 125)
+                .frame(width: 100, height: 100)
                 .clipShape(Circle())
                 .clipped()
             
             Text("@becky_123")
                 .fontWeight(.semibold)
-            
-            ZStack {
-                HStack {
-                    Divider()
-                        .frame(maxHeight: 25)
-                    VStack {
-                        Text("300")
-                            .fontWeight(.semibold)
-                        Text("Followers")
-                            .fontWeight(.light)
-                            .font(.callout)
-                            .foregroundColor(.gray)
-                    }
-                    .padding(.horizontal)
-                    Divider()
-                        .frame(maxHeight: 25)
-                }
                 
-                
-                HStack(spacing: 30) {
+                HStack(spacing: 20) {
                     VStack {
                         Text("200")
                             .fontWeight(.semibold)
                         Text("Following")
                             .fontWeight(.light)
-                            .font(.callout)
+                            .font(.footnote)
                             .foregroundColor(.gray)
                     }
+                    .frame(width: 75)
                     
-                    Spacer()
+                    Divider()
+                        .frame(maxHeight: 25)
+                    
+                    VStack {
+                        Text("300")
+                            .fontWeight(.semibold)
+                        Text("Followers")
+                            .fontWeight(.light)
+                            .font(.footnote)
+                            .foregroundColor(.gray)
+                    }
+                    .frame(width: 75)
+                    .layoutPriority(1)
+                    
+                    Divider()
+                        .frame(maxHeight: 25)
                     
                     VStack {
                         Text("500")
                             .fontWeight(.semibold)
                         Text("Points")
                             .fontWeight(.light)
-                            .font(.callout)
+                            .font(.footnote)
                             .foregroundColor(.gray)
                     }
+                    .frame(width: 75)
                 }
-                .padding(.horizontal, 40)
-                .padding(.trailing, 20)
-            }
             
             HStack {
                 Button(action: {
@@ -93,6 +89,7 @@ struct ProfileHeaderView: View {
                 .padding(.top)
         }
         .padding(.horizontal)
+        .padding(.top)
     }
 }
 

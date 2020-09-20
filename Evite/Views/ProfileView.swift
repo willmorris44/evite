@@ -28,14 +28,18 @@ struct ProfileView: View {
                         Divider()
                         
                         if #available(iOS 14.0, *) {
-                            ProfileSegmentedController(selected: self.$segmentedControl)
+                            ProfileSegmentedControllerIOS14(selected: self.$segmentedControl)
                         } else {
-                            // Fallback on earlier versions
+                            ProfileSegmentedController(selected: self.$segmentedControl)
                         }
                         
                         Divider()
                         
-                        CalendarView()
+                        if segmentedControl == 0 {
+                            CalendarView()
+                        } else {
+                            Text("Upcoming cards")
+                        }
                     }
                 }
                 NavigationLink(destination: Text("Settings"), isActive: $showSettings) {
@@ -47,6 +51,7 @@ struct ProfileView: View {
             }, label: {
                 Icons.elipses.image
                     .frame(width: 50, height: 30)
+                    .foregroundColor(.black)
             }))
             .navigationBarTitle("Becky", displayMode: .inline)
         }
