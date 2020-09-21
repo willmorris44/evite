@@ -9,8 +9,16 @@
 import SwiftUI
 
 struct SearchView: View {
+    @State private var searchTerm: String = ""
+    
     var body: some View {
-        Text("Search View")
+        NavigationView {
+            VStack {
+                SearchBar(text: $searchTerm)
+                Spacer()
+            }
+            .navigationBarTitle("Search", displayMode: .inline)
+        }
     }
 }
 

@@ -10,11 +10,6 @@ import SwiftUI
 
 struct MainFeedView: View {
     
-    init() {
-        UINavigationBar.appearance().isTranslucent = false
-        UINavigationBar.appearance().barTintColor = .primary
-    }
-    
     var body: some View {
         NavigationView {
             GeometryReader { fullView in

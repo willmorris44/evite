@@ -10,11 +10,19 @@ import SwiftUI
 
 struct ContentView: View {
     
+    
     init() {
         let tabBarAppearance = UITabBarAppearance()
         tabBarAppearance.configureWithOpaqueBackground()
         tabBarAppearance.backgroundColor = .primary
         UITabBar.appearance().standardAppearance = tabBarAppearance
+        
+        let navAppearance = UINavigationBarAppearance()
+        navAppearance.configureWithOpaqueBackground()
+        navAppearance.backgroundColor = .primary
+        UINavigationBar.appearance().compactAppearance = navAppearance
+        UINavigationBar.appearance().standardAppearance = navAppearance
+        UINavigationBar.appearance().scrollEdgeAppearance = navAppearance
     }
 
     var body: some View {
@@ -44,7 +52,7 @@ struct ContentView: View {
                     Icons.person.image
             }
         }
-        .accentColor(Color.secondary)
+        .accentColor(.black)
     }
 }
 
