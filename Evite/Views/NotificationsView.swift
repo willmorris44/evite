@@ -9,8 +9,24 @@
 import SwiftUI
 
 struct NotificationsView: View {
+    
+    init() {
+        UINavigationBar.appearance().isTranslucent = false
+        UINavigationBar.appearance().barTintColor = .primary
+    }
+    
     var body: some View {
-        Text("Notifications View")
+        NavigationView {
+            VStack {
+                ScrollView {
+                    ForEach((0..<10)) { i in
+                        NotificationView()
+                            .padding(.top)
+                    }
+                }
+            }
+            .navigationBarTitle("Notifications", displayMode: .inline)
+        }
     }
 }
 

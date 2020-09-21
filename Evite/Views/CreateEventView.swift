@@ -30,9 +30,8 @@ struct CreateEventView: View {
                         .font(.title)
 
                     if #available(iOS 14.0, *) {
-                        DatePicker("", selection: $date)
-                            .datePickerStyle(GraphicalDatePickerStyle())
-                            .frame(width: 300)
+                        DatePicker("When", selection: $date)
+                            .datePickerStyle(DefaultDatePickerStyle())
                     } else {
                         DatePicker("", selection: $date)
                     }
