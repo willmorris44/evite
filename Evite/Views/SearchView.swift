@@ -11,11 +11,6 @@ import SwiftUI
 struct SearchView: View {
     @State private var searchTerm: String = ""
     
-    init() {
-        UINavigationBar.appearance().isTranslucent = false
-        UINavigationBar.appearance().barTintColor = .primary
-    }
-    
     var body: some View {
         NavigationView {
             VStack {

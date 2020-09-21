@@ -10,11 +10,6 @@ import SwiftUI
 
 struct NotificationsView: View {
     
-    init() {
-        UINavigationBar.appearance().isTranslucent = false
-        UINavigationBar.appearance().barTintColor = .primary
-    }
-    
     var body: some View {
         NavigationView {
             VStack {

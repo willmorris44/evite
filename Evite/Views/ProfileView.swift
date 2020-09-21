@@ -21,12 +21,7 @@ import SwiftUI
 struct ProfileView: View {
     @State private var showSettings = false
     @State private var segmentedControl = 0
-    
-    init() {
-        UINavigationBar.appearance().isTranslucent = false
-        UINavigationBar.appearance().barTintColor = .primary
-    }
-    
+
     var body: some View {
         NavigationView {
             GeometryReader { fullView in
@@ -58,7 +53,7 @@ struct ProfileView: View {
                         }
                     }
                 }
-                NavigationLink(destination: Text("Settings"), isActive: $showSettings) {
+                NavigationLink(destination: SettingsView(), isActive: $showSettings) {
                     EmptyView()
                 }
             }
@@ -66,6 +61,7 @@ struct ProfileView: View {
                 self.showSettings = true
             }, label: {
                 Icons.elipses.image
+                    .font(.headline)
                     .frame(width: 50, height: 30)
                     .foregroundColor(.black)
             }))

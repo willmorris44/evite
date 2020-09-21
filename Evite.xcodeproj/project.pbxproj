@@ -18,6 +18,8 @@
 		E46675862517F2A30040A101 /* ProfileSegmentedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46675852517F2A30040A101 /* ProfileSegmentedController.swift */; };
 		E466758B25190D360040A101 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E466758A25190D360040A101 /* NotificationView.swift */; };
 		E466758E251914580040A101 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E466758D251914580040A101 /* SearchBar.swift */; };
+		E4667591251919DF0040A101 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4667590251919DF0040A101 /* SettingsView.swift */; };
+		E466759425192EA70040A101 /* SettingsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E466759325192EA70040A101 /* SettingsRowView.swift */; };
 		E492956D25129C2C00622DB5 /* CalendarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E492956C25129C2C00622DB5 /* CalendarHelper.swift */; };
 		E4D990C724F593E5001B1C76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D990C624F593E5001B1C76 /* AppDelegate.swift */; };
 		E4D990C924F593E5001B1C76 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D990C824F593E5001B1C76 /* SceneDelegate.swift */; };
@@ -48,6 +50,8 @@
 		E46675852517F2A30040A101 /* ProfileSegmentedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSegmentedController.swift; sourceTree = "<group>"; };
 		E466758A25190D360040A101 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		E466758D251914580040A101 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		E4667590251919DF0040A101 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		E466759325192EA70040A101 /* SettingsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRowView.swift; sourceTree = "<group>"; };
 		E492956C25129C2C00622DB5 /* CalendarHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHelper.swift; sourceTree = "<group>"; };
 		E4D990C324F593E5001B1C76 /* Evite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Evite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4D990C624F593E5001B1C76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +114,8 @@
 				E46675852517F2A30040A101 /* ProfileSegmentedController.swift */,
 				E466758A25190D360040A101 /* NotificationView.swift */,
 				E466758D251914580040A101 /* SearchBar.swift */,
+				E4667590251919DF0040A101 /* SettingsView.swift */,
+				E466759325192EA70040A101 /* SettingsRowView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -283,11 +289,13 @@
 				E4FB335C2511202900717EC6 /* StoryCardView.swift in Sources */,
 				E4D990C724F593E5001B1C76 /* AppDelegate.swift in Sources */,
 				56DAA31724F59C6200A17195 /* Invite.swift in Sources */,
+				E466759425192EA70040A101 /* SettingsRowView.swift in Sources */,
 				E4D990C924F593E5001B1C76 /* SceneDelegate.swift in Sources */,
 				E4D990DB24FD75CE001B1C76 /* SmallCardView.swift in Sources */,
 				E492956D25129C2C00622DB5 /* CalendarHelper.swift in Sources */,
 				E4D990EB250EDA0A001B1C76 /* ProfileHeaderView.swift in Sources */,
 				E4D990CB24F593E5001B1C76 /* ContentView.swift in Sources */,
+				E4667591251919DF0040A101 /* SettingsView.swift in Sources */,
 				56DAA31524F59BB400A17195 /* BigCardView.swift in Sources */,
 				E4D990E324FEEDD2001B1C76 /* CreateEventView.swift in Sources */,
 				E4D990E924FEEEB0001B1C76 /* SearchView.swift in Sources */,

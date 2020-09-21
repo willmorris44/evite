@@ -13,11 +13,6 @@ struct CreateEventView: View {
     @State private var date: Date = Date()
     @State private var place: String = ""
     
-    init() {
-        UINavigationBar.appearance().isTranslucent = false
-        UINavigationBar.appearance().barTintColor = .primary
-    }
-    
     var body: some View {
         NavigationView {
             VStack {
