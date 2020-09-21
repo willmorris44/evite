@@ -20,24 +20,23 @@ struct CalendarView: View {
         VStack(spacing: 0) {
             ForEach(Date().thisWeek()) { date in
                 HStack {
-                    HStack {
-                        Text("\(date.day)")
-                            .font(.largeTitle)
-                            .fontWeight(.semibold)
-                            .padding(.horizontal)
-                    }
-                    //.layoutPriority(1)
+                    Text("\(date.day)")
+                        .font(.largeTitle)
+                        .fontWeight(.semibold)
+                        .frame(width: 50)
+                        .padding(.leading)
+                        .lineLimit(1)
                     
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack {
-                            ForEach((0..<10)) { j in
+                            ForEach((0..<3)) { j in
                                 SmallCardView()
-                                //.stacked(at: j, in: 9)
+                                .stacked(at: j, in: 9)
                             }
                         }
                         .padding(.vertical)
                     }
-                    
+                    .offset(x: -15)
                 }
                 
             }

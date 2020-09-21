@@ -75,7 +75,7 @@ struct SmallCardView: View {
         .frame(height: 150)
         .background(Color(.primary))
         .cornerRadius(10)
-        .shadow(color: .lightGray, radius: 5)
+        .shadow(color: .lightGray, radius: 5, y: 3)
         .padding(.horizontal)
     }
 }

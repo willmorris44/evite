@@ -12,7 +12,7 @@ extension Date {
     func thisWeek() -> [IdentifiableDate] {
         var week: [IdentifiableDate] = []
         var newDate = self
-        for _ in 1...6 {
+        for _ in 1...3 {
             week.append(IdentifiableDate(date: newDate))
             newDate = newDate.addingTimeInterval(86400)
         }
