@@ -8,6 +8,16 @@
 
 import SwiftUI
 
+//extension HorizontalAlignment {
+//    private enum MyHAlignment: AlignmentID {
+//        static func defaultValue(in d: ViewDimensions) -> CGFloat {
+//            return d[HorizontalAlignment.center]
+//        }
+//    }
+//
+//    static let myhAlignment = HorizontalAlignment(MyHAlignment.self)
+//}
+
 struct ProfileView: View {
     @State private var showSettings = false
     @State private var segmentedControl = 0
@@ -34,6 +44,12 @@ struct ProfileView: View {
                         }
                         
                         Divider()
+                        
+//                        HStack {
+//                            CalendarView()
+//                            
+//                            Text("LL")
+//                        }
                         
                         if segmentedControl == 0 {
                             CalendarView()

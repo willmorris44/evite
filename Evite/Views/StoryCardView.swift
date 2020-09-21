@@ -38,7 +38,7 @@ struct StoryCardView: View {
         .frame(height: 115)
         .background(Color.primary)
         .cornerRadius(10)
-        .shadow(radius: 5)
+        .shadow(color: .lightGray, radius: 5, y: 3)
     }
 }
 

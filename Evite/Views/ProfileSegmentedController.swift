@@ -8,48 +8,79 @@
 
 import SwiftUI
 
+extension HorizontalAlignment {
+    private enum MyHAlignment: AlignmentID {
+        static func defaultValue(in d: ViewDimensions) -> CGFloat {
+            return d[HorizontalAlignment.center]
+        }
+    }
+    
+    static let myhAlignment = HorizontalAlignment(MyHAlignment.self)
+}
+
 struct ProfileSegmentedController: View {
     @Binding var selected: Int
     
     var body: some View {
-        HStack(alignment: .top) {
-            VStack {
-                Button(action: {
-                    withAnimation(.spring()) { self.selected = 0 }
-                }, label: {
-                    Icons.calendar.image
-                        .frame(width: 30, height: 30)
-                        .foregroundColor((selected == 0) ? .black : .gray)
-                })
+        VStack(alignment: .myhAlignment) {
+            HStack(alignment: .top) {
+                VStack {
+                    if selected == 0 {
+                        Button(action: {
+                            withAnimation(.spring()) { self.selected = 0 }
+                        }, label: {
+                            Icons.calendar.image
+                                .frame(width: 30, height: 30)
+                                .foregroundColor((selected == 0) ? .black : .gray)
+                        })
+                        .alignmentGuide(.myhAlignment, computeValue: { d in
+                            return d[HorizontalAlignment.center]
+                        })
+                    } else {
+                        Button(action: {
+                            withAnimation(.spring()) { self.selected = 0 }
+                        }, label: {
+                            Icons.calendar.image
+                                .frame(width: 30, height: 30)
+                                .foregroundColor((selected == 0) ? .black : .gray)
+                        })
+                    }
+                }
                 
-                if selected == 0 {
-                    RoundedRectangle(cornerRadius: 5, style: .continuous)
-                        .frame(width: 30, height: 2)
-                        .padding(.top, 0.5)
-                        .background(Color.black)
+                Spacer()
+                
+                VStack {
+                    if selected == 1 {
+                        Button(action: {
+                            withAnimation(.spring()) { self.selected = 1 }
+                        }, label: {
+                            Image(systemName: "list.dash")
+                                .frame(width: 30, height: 30)
+                                .foregroundColor((selected == 1) ? .black : .gray)
+                        })
+                        .alignmentGuide(.myhAlignment, computeValue: { d in
+                            return d[HorizontalAlignment.center]
+                        })
+                    } else {
+                        Button(action: {
+                            withAnimation(.spring()) { self.selected = 1 }
+                        }, label: {
+                            Image(systemName: "list.dash")
+                                .frame(width: 30, height: 30)
+                                .foregroundColor((selected == 1) ? .black : .gray)
+                        })
+                    }
                 }
             }
+            .padding(.horizontal, 100)
             
-            Spacer()
-            
-            VStack {
-                Button(action: {
-                    withAnimation(.spring()) { self.selected = 1 }
-                }, label: {
-                    Image(systemName: "list.dash")
-                        .frame(width: 30, height: 30)
-                        .foregroundColor((selected == 1) ? .black : .gray)
+            RoundedRectangle(cornerRadius: 5, style: .continuous)
+                .frame(width: 40, height: 2)
+                .background(Color.black)
+                .alignmentGuide(.myhAlignment, computeValue: { d in
+                    return d[HorizontalAlignment.center]
                 })
-                
-                if selected == 1 {
-                    RoundedRectangle(cornerRadius: 5, style: .continuous)
-                        .frame(width: 30, height: 2)
-                        .padding(.top, 0.5)
-                        .background(Color.black)
-                }
-            }
         }
-        .padding(.horizontal, 100)
     }
 }
 
@@ -66,7 +97,7 @@ struct ProfileSegmentedControllerIOS14: View {
                 }, label: {
                     Icons.calendar.image
                         .frame(width: 30, height: 30)
-                        .foregroundColor((selected == 0) ? .black : .gray)
+                        .foregroundColor((selected == 0) ? .black : .lightGray)
                 })
                 
                 if selected == 0 {
@@ -86,7 +117,7 @@ struct ProfileSegmentedControllerIOS14: View {
                 }, label: {
                     Image(systemName: "list.dash")
                         .frame(width: 30, height: 30)
-                        .foregroundColor((selected == 1) ? .black : .gray)
+                        .foregroundColor((selected == 1) ? .black : .lightGray)
                 })
                 
                 if selected == 1 {
@@ -102,7 +133,6 @@ struct ProfileSegmentedControllerIOS14: View {
     }
 }
 
-@available(iOS 14.0, *)
 struct ProfileSegmentedController_Previews: PreviewProvider {
     static var previews: some View {
         ProfileSegmentedController(selected: .constant(0))
