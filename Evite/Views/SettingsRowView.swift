@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct SettingsRowView: View {
+    @State private var showPage = false
+    
     var title: String
     
 //    init(_ title: String) {
@@ -24,8 +26,16 @@ struct SettingsRowView: View {
             
             Image(systemName: "chevron.right")
                 .foregroundColor(.gray)
+            
+            NavigationLink(destination: Text(title), isActive: $showPage) {
+                EmptyView()
+            }
         }
+        .background(Color.primary)
         .padding()
+        .onTapGesture(perform: {
+            self.showPage = true
+        })
     }
 }
 

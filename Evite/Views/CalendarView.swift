@@ -9,9 +9,15 @@
 import SwiftUI
 
 extension View {
-    func stacked(at position: Int, in total: Int) -> some View {
-        var offset = CGFloat(position * -75)
-        return self.offset(CGSize(width: offset, height: 0)).zIndex(Double(-position))
+    func stacked(at position: Int, total: Int, space: CoordinateSpace) -> some View {
+        self.background(GeometryReader { geo in
+            let diff = geo.frame(in: space).width - (geo.size.width * CGFloat(total))
+            let offset = diff / CGFloat(total-1)
+            if position > 1 {
+                self.offset(CGSize(width: -offset, height: 0))
+            }
+            self.zIndex(Double(-position))
+        })
     }
 }
 
@@ -29,16 +35,16 @@ struct CalendarView: View {
                     
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack {
-                            ForEach((0..<3)) { j in
-                                SmallCardView()
-                                .stacked(at: j, in: 9)
-                            }
+                            ForEach((0..<3)) { i in
+                                    SmallCardView()
+                                        //.stacked(at: i, total: 3, space: .named("calendarRow"))
+                                }
                         }
                         .padding(.vertical)
                     }
                     .offset(x: -15)
+                    .coordinateSpace(name: "calendarRow")
                 }
-                
             }
         }
     }

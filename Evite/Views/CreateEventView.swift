@@ -17,26 +17,82 @@ struct CreateEventView: View {
         NavigationView {
             VStack {
                 VStack {
-                    TextField("Title", text: $title)
-                        .font(.title)
-                        .padding(.top)
+                    VStack(alignment: .leading) {
+                        Text("Name of event")
+                            .font(.caption)
+                            .fontWeight(.semibold)
+                        
+                        TextField("ex: John's Birthday Party", text: $title)
+                            .font(.headline)
+                            //.textFieldStyle(RoundedBorderTextFieldStyle())
+                    }
                     
-                    TextField("Where", text: $place)
-                        .font(.title)
+                    Divider()
+                        .padding(.bottom)
+                    
+                    VStack(alignment: .leading) {
+                        Text("Place of event")
+                            .font(.caption)
+                            .fontWeight(.semibold)
+                        
+                        TextField("ex: 123 Grand Ave", text: $place)
+                            .font(.headline)
+                    }
+                    
+                    Divider()
+                        .padding(.bottom)
 
                     if #available(iOS 14.0, *) {
-                        DatePicker("When", selection: $date)
-                            .datePickerStyle(DefaultDatePickerStyle())
+//                        DatePicker("When", selection: $date)
+//                            .datePickerStyle(DefaultDatePickerStyle())
+                        DatePicker(selection: $date, displayedComponents: [DatePickerComponents.hourAndMinute, DatePickerComponents.date]) {
+                                Text("Select a time")
+                                    .font(.headline)
+                        }.accentColor(.black)
                     } else {
-                        DatePicker("", selection: $date)
+                        VStack(alignment: .leading) {
+                            Text("Select a time")
+                                .font(.caption)
+                                .fontWeight(.semibold)
+                            
+                            DatePicker("", selection: $date)
+                                .frame(height: 175)
+                        }
                     }
                 }
                 .padding()
+                                
+                Spacer()
                 
                 BigCardView()
+                
+                if #available(iOS 14.0, *) {
+                    Button(action: {
+                        
+                    }, label: {
+                        Text("Create")
+                            .foregroundColor(.white)
+                            .font(.title)
+                            .fontWeight(.semibold)
+                            .padding()
+                    })
+                    .frame(maxWidth: .infinity)
+                    .background(Color.purple)
+                    .cornerRadius(100)
+                    .padding()
+                }
+                
+                Spacer()
             }
-            .navigationBarTitle("Create", displayMode: .inline)
             .padding(.vertical)
+            .navigationBarTitle("Create", displayMode: .inline)
+            .navigationBarItems(trailing: Button(action: {
+                // todo
+            }, label: {
+                Image(systemName: "plus")
+                    .foregroundColor(.secondary)
+                    .frame(width: 50, height: 30)
+            }))
         }
     }
 }
