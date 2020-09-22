@@ -27,7 +27,7 @@ struct ProfileSegmentedController: View {
                 VStack {
                     if selected == 0 {
                         Button(action: {
-                            withAnimation(.spring()) { self.selected = 0 }
+                            withAnimation(.spring()) { selected = 0 }
                         }, label: {
                             Icons.calendar.image
                                 .frame(width: 30, height: 30)
@@ -38,7 +38,7 @@ struct ProfileSegmentedController: View {
                         })
                     } else {
                         Button(action: {
-                            withAnimation(.spring()) { self.selected = 0 }
+                            withAnimation(.spring()) { selected = 0 }
                         }, label: {
                             Icons.calendar.image
                                 .frame(width: 30, height: 30)
@@ -52,7 +52,7 @@ struct ProfileSegmentedController: View {
                 VStack {
                     if selected == 1 {
                         Button(action: {
-                            withAnimation(.spring()) { self.selected = 1 }
+                            withAnimation(.spring()) { selected = 1 }
                         }, label: {
                             Image(systemName: "list.dash")
                                 .frame(width: 30, height: 30)
@@ -63,7 +63,7 @@ struct ProfileSegmentedController: View {
                         })
                     } else {
                         Button(action: {
-                            withAnimation(.spring()) { self.selected = 1 }
+                            withAnimation(.spring()) { selected = 1 }
                         }, label: {
                             Image(systemName: "list.dash")
                                 .frame(width: 30, height: 30)
@@ -72,7 +72,7 @@ struct ProfileSegmentedController: View {
                     }
                 }
             }
-            .padding(.horizontal, 100)
+            .padding(.horizontal, 75)
             
             RoundedRectangle(cornerRadius: 5, style: .continuous)
                 .frame(width: 40, height: 2)
@@ -80,56 +80,8 @@ struct ProfileSegmentedController: View {
                 .alignmentGuide(.myhAlignment, computeValue: { d in
                     return d[HorizontalAlignment.center]
                 })
+                .animation(.spring())
         }
-    }
-}
-
-@available(iOS 14.0, *)
-struct ProfileSegmentedControllerIOS14: View {
-    @Binding var selected: Int
-    @Namespace private var animation
-    
-    var body: some View {
-        HStack(alignment: .top) {
-            VStack {
-                Button(action: {
-                    withAnimation(.spring()) { self.selected = 0 }
-                }, label: {
-                    Icons.calendar.image
-                        .frame(width: 30, height: 30)
-                        .foregroundColor((selected == 0) ? .black : .lightGray)
-                })
-                
-                if selected == 0 {
-                    RoundedRectangle(cornerRadius: 5, style: .continuous)
-                        .frame(width: 30, height: 2)
-                        .padding(.top, 0.5)
-                        .background(Color.black)
-                        .matchedGeometryEffect(id: "shape", in: animation)
-                }
-            }
-            
-            Spacer()
-            
-            VStack {
-                Button(action: {
-                    withAnimation(.spring()) { self.selected = 1 }
-                }, label: {
-                    Image(systemName: "list.dash")
-                        .frame(width: 30, height: 30)
-                        .foregroundColor((selected == 1) ? .black : .lightGray)
-                })
-                
-                if selected == 1 {
-                    RoundedRectangle(cornerRadius: 5, style: .continuous)
-                        .frame(width: 30, height: 2)
-                        .padding(.top, 0.5)
-                        .background(Color.black)
-                        .matchedGeometryEffect(id: "shape", in: animation)
-                }
-            }
-        }
-        .padding(.horizontal, 100)
     }
 }
 

@@ -23,7 +23,7 @@ extension View {
 
 struct CalendarView: View {
     var body: some View {
-        VStack(spacing: 0) {
+        LazyVStack(spacing: 0) {
             ForEach(Date().thisWeek()) { date in
                 HStack {
                     Text("\(date.day)")
@@ -34,19 +34,19 @@ struct CalendarView: View {
                         .lineLimit(1)
                     
                     ScrollView(.horizontal, showsIndicators: false) {
-                        HStack {
-                            ForEach((0..<3)) { i in
-                                    SmallCardView()
-                                        //.stacked(at: i, total: 3, space: .named("calendarRow"))
-                                }
+                        LazyHStack {
+                            ForEach((0..<9)) { i in
+                                SmallCardView()
+                                //.stacked(at: i, total: 3, space: .named("calendarRow"))
+                            }
                         }
                         .padding(.vertical)
                     }
-                    .offset(x: -15)
                     .coordinateSpace(name: "calendarRow")
                 }
             }
         }
+        .frame(maxHeight: .infinity)
     }
 }
 
