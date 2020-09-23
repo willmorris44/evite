@@ -70,61 +70,36 @@ struct PagerView<Content: View>: View {
     }
 }
 
-extension VerticalAlignment {
-    private enum MyVerticalAlignment : AlignmentID {
-        static func defaultValue(in d: ViewDimensions) -> CGFloat {
-            return d[.bottom]
-        }
-    }
-    
-    static let myVerticalAlignment = VerticalAlignment(MyVerticalAlignment.self)
-}
-
-extension HorizontalAlignment {
-    private enum MyHorizontalAlignment : AlignmentID {
-        static func defaultValue(in d: ViewDimensions) -> CGFloat {
-            return d[.leading]
-        }
-    }
-    
-    static let myHorizontalAlignment = HorizontalAlignment(MyHorizontalAlignment.self)
-}
-
-//extension Alignment {
-//    static let myAlignment = Alignment(horizontal: .myHorizontalAlignment, vertical: .myVerticalAlignment)
-//}
-
-extension VerticalAlignment {
-    private enum MyAlignment : AlignmentID {
-        static func defaultValue(in d: ViewDimensions) -> CGFloat {
-            return d[.bottom]
-        }
-    }
-    static let myAlignment = VerticalAlignment(MyAlignment.self)
-}
-
 struct ProfileView: View {
     @State private var showSettings = false
     @State private var segmentedControl = 0
-    @State private var shouldScroll = false
-    @State private var contentSize: CGSize = CGSize(width: 0, height: 50) {
-        didSet {
-            print(contentSize)
-        }
-    }
+    @State private var isScrolledToTop = false
     
     var body: some View {
         NavigationView {
             GeometryReader { fullView in
-                ScrollView(.vertical, showsIndicators: true) {
-                    ZStack {
-                        
+                ZStack {
+                    ScrollView(.vertical, showsIndicators: true) {
                         VStack {
                             ProfileHeaderView()
                                 .padding()
                             
-                            Rectangle()
-                                .foregroundColor(.clear)
+                            VStack {
+                                Divider()
+                                
+                                ProfileSegmentedController(selected: $segmentedControl)
+                                
+                                Divider()
+                            }
+                            .background(GeometryReader { geo in
+                                Color.white.onChange(of: geo.frame(in: .named("screen")).maxY, perform: { value in
+                                    if geo.frame(in: .named("screen")).minY < 0 {
+                                        isScrolledToTop = true
+                                    } else if isScrolledToTop && geo.frame(in: .named("screen")).minY > 0 {
+                                        isScrolledToTop = false
+                                    }
+                                })
+                            })
                             
                             PagerView(pageCount: 2, currentIndex: $segmentedControl) {
                                 CalendarView()
@@ -138,8 +113,9 @@ struct ProfileView: View {
                                 }
                             }
                         }
-                        .alignmentGuide(.myAlignment, computeValue: { d in d[VerticalAlignment.top] })
-                        
+                    }
+                    
+                    if isScrolledToTop {
                         VStack {
                             VStack {
                                 Divider()
@@ -149,7 +125,6 @@ struct ProfileView: View {
                                 Divider()
                             }
                             .background(Color.white)
-                            .alignmentGuide(.myAlignment, computeValue: { d in d[VerticalAlignment.bottom] })
                             
                             Spacer()
                         }
@@ -159,6 +134,7 @@ struct ProfileView: View {
                     EmptyView()
                 }
             }
+            .coordinateSpace(name: "screen")
             .navigationBarItems(trailing: Button(action: {
                 self.showSettings = true
             }, label: {
