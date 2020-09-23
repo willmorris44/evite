@@ -20,9 +20,10 @@
 		E466758E251914580040A101 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E466758D251914580040A101 /* SearchBar.swift */; };
 		E4667591251919DF0040A101 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4667590251919DF0040A101 /* SettingsView.swift */; };
 		E466759425192EA70040A101 /* SettingsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E466759325192EA70040A101 /* SettingsRowView.swift */; };
+		E466759A251A6C880040A101 /* StoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4667599251A6C870040A101 /* StoryView.swift */; };
+		E466759F251A70E90040A101 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E466759E251A70E90040A101 /* MapView.swift */; };
+		E46675A2251A75620040A101 /* EViteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46675A1251A75620040A101 /* EViteApp.swift */; };
 		E492956D25129C2C00622DB5 /* CalendarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E492956C25129C2C00622DB5 /* CalendarHelper.swift */; };
-		E4D990C724F593E5001B1C76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D990C624F593E5001B1C76 /* AppDelegate.swift */; };
-		E4D990C924F593E5001B1C76 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D990C824F593E5001B1C76 /* SceneDelegate.swift */; };
 		E4D990CB24F593E5001B1C76 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D990CA24F593E5001B1C76 /* ContentView.swift */; };
 		E4D990CD24F593E9001B1C76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4D990CC24F593E9001B1C76 /* Assets.xcassets */; };
 		E4D990D024F593E9001B1C76 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4D990CF24F593E9001B1C76 /* Preview Assets.xcassets */; };
@@ -52,10 +53,11 @@
 		E466758D251914580040A101 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		E4667590251919DF0040A101 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		E466759325192EA70040A101 /* SettingsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRowView.swift; sourceTree = "<group>"; };
+		E4667599251A6C870040A101 /* StoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryView.swift; sourceTree = "<group>"; };
+		E466759E251A70E90040A101 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		E46675A1251A75620040A101 /* EViteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EViteApp.swift; sourceTree = "<group>"; };
 		E492956C25129C2C00622DB5 /* CalendarHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHelper.swift; sourceTree = "<group>"; };
 		E4D990C324F593E5001B1C76 /* Evite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Evite.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E4D990C624F593E5001B1C76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E4D990C824F593E5001B1C76 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E4D990CA24F593E5001B1C76 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E4D990CC24F593E9001B1C76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4D990CF24F593E9001B1C76 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -86,8 +88,7 @@
 		56DAA30E24F5985900A17195 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				E4D990C624F593E5001B1C76 /* AppDelegate.swift */,
-				E4D990C824F593E5001B1C76 /* SceneDelegate.swift */,
+				E46675A1251A75620040A101 /* EViteApp.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -116,6 +117,8 @@
 				E466758D251914580040A101 /* SearchBar.swift */,
 				E4667590251919DF0040A101 /* SettingsView.swift */,
 				E466759325192EA70040A101 /* SettingsRowView.swift */,
+				E4667599251A6C870040A101 /* StoryView.swift */,
+				E466759E251A70E90040A101 /* MapView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -287,10 +290,10 @@
 				E466758E251914580040A101 /* SearchBar.swift in Sources */,
 				E4D990EF250EDB84001B1C76 /* CalendarView.swift in Sources */,
 				E4FB335C2511202900717EC6 /* StoryCardView.swift in Sources */,
-				E4D990C724F593E5001B1C76 /* AppDelegate.swift in Sources */,
+				E466759A251A6C880040A101 /* StoryView.swift in Sources */,
+				E46675A2251A75620040A101 /* EViteApp.swift in Sources */,
 				56DAA31724F59C6200A17195 /* Invite.swift in Sources */,
 				E466759425192EA70040A101 /* SettingsRowView.swift in Sources */,
-				E4D990C924F593E5001B1C76 /* SceneDelegate.swift in Sources */,
 				E4D990DB24FD75CE001B1C76 /* SmallCardView.swift in Sources */,
 				E492956D25129C2C00622DB5 /* CalendarHelper.swift in Sources */,
 				E4D990EB250EDA0A001B1C76 /* ProfileHeaderView.swift in Sources */,
@@ -299,6 +302,7 @@
 				56DAA31524F59BB400A17195 /* BigCardView.swift in Sources */,
 				E4D990E324FEEDD2001B1C76 /* CreateEventView.swift in Sources */,
 				E4D990E924FEEEB0001B1C76 /* SearchView.swift in Sources */,
+				E466759F251A70E90040A101 /* MapView.swift in Sources */,
 				E4D990E524FEEDE5001B1C76 /* MainFeedView.swift in Sources */,
 				E412DC452517EBF300631177 /* NavAndTabExtensions.swift in Sources */,
 				E4D990E124FEEDB6001B1C76 /* ProfileView.swift in Sources */,
@@ -372,7 +376,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -426,7 +430,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

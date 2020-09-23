@@ -12,6 +12,7 @@ struct CreateEventView: View {
     @State private var title: String = ""
     @State private var date: Date = Date()
     @State private var place: String = ""
+    @State private var mapIsPresented = false
     
     var body: some View {
         NavigationView {
@@ -24,7 +25,7 @@ struct CreateEventView: View {
                         
                         TextField("ex: John's Birthday Party", text: $title)
                             .font(.headline)
-                            //.textFieldStyle(RoundedBorderTextFieldStyle())
+                        //.textFieldStyle(RoundedBorderTextFieldStyle())
                     }
                     
                     Divider()
@@ -37,50 +38,38 @@ struct CreateEventView: View {
                         
                         TextField("ex: 123 Grand Ave", text: $place)
                             .font(.headline)
+                            .onTapGesture {
+                                self.mapIsPresented.toggle()
+                            }
                     }
                     
                     Divider()
                         .padding(.bottom)
-
-                    if #available(iOS 14.0, *) {
-//                        DatePicker("When", selection: $date)
-//                            .datePickerStyle(DefaultDatePickerStyle())
-                        DatePicker(selection: $date, displayedComponents: [DatePickerComponents.hourAndMinute, DatePickerComponents.date]) {
-                                Text("Select a time")
-                                    .font(.headline)
-                        }.accentColor(.black)
-                    } else {
-                        VStack(alignment: .leading) {
-                            Text("Select a time")
-                                .font(.caption)
-                                .fontWeight(.semibold)
-                            
-                            DatePicker("", selection: $date)
-                                .frame(height: 175)
-                        }
-                    }
+                    
+                    DatePicker(selection: $date, displayedComponents: [DatePickerComponents.hourAndMinute, DatePickerComponents.date]) {
+                        Text("Select a time")
+                            .font(.headline)
+                    }.accentColor(.black)
                 }
                 .padding()
-                                
+                
                 Spacer()
                 
                 BigCardView()
-                
-                if #available(iOS 14.0, *) {
-                    Button(action: {
-                        
-                    }, label: {
-                        Text("Create")
-                            .foregroundColor(.white)
-                            .font(.title)
-                            .fontWeight(.semibold)
-                            .padding()
-                    })
-                    .frame(maxWidth: .infinity)
-                    .background(Color.purple)
-                    .cornerRadius(100)
-                    .padding()
-                }
+                                
+                Button(action: {
+                    
+                }, label: {
+                    Text("Create")
+                        .foregroundColor(.white)
+                        .font(.title)
+                        .fontWeight(.semibold)
+                        .padding()
+                })
+                .frame(maxWidth: .infinity)
+                .background(Color.purple)
+                .cornerRadius(100)
+                .padding()
                 
                 Spacer()
             }
@@ -91,9 +80,11 @@ struct CreateEventView: View {
             }, label: {
                 Image(systemName: "plus")
                     .foregroundColor(.secondary)
+                    .font(.headline)
                     .frame(width: 50, height: 30)
             }))
         }
+        .fullScreenCover(isPresented: $mapIsPresented, content: MapView.init)
     }
 }
 

@@ -10,6 +10,7 @@ import SwiftUI
 
 struct SmallCardView: View {
     @State private var isShow: Bool = false
+    
     var body: some View {
         VStack {
             Text("MGM Grand Party")

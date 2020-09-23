@@ -8,22 +8,60 @@
 
 import SwiftUI
 
-extension View {
-    func stacked(at position: Int, total: Int, space: CoordinateSpace) -> some View {
-        self.background(GeometryReader { geo in
-            let diff = geo.frame(in: space).width - (geo.size.width * CGFloat(total))
-            let offset = diff / CGFloat(total-1)
-            if position > 1 {
-                self.offset(CGSize(width: -offset, height: 0))
-            }
-            self.zIndex(Double(-position))
-        })
+struct CalendarSizePreferenceKey: PreferenceKey {
+    static var defaultValue: CGSizeEQ = CGSizeEQ(.zero, .zero)
+    
+    static func reduce(value: inout CGSizeEQ, nextValue: () -> CGSizeEQ) {
+        value = nextValue()
+    }
+}
+
+class CGSizeEQ: Equatable {
+    var left: CGSize
+    var right: CGSize
+    
+    init(_ left: CGSize, _ right: CGSize) {
+        self.left = left
+        self.right = right
+    }
+    
+    static func == (lhs: CGSizeEQ, rhs: CGSizeEQ) -> Bool {
+        return lhs.left == rhs.left && lhs.right == rhs.right
+    }
+    
+    
+}
+
+struct ChildSizeModifier: ViewModifier {
+    private var sizeView: some View {
+        GeometryReader { geometry in
+            Color.clear.transformPreference(CalendarSizePreferenceKey.self, {$0.left = geometry.size})
+        }
+    }
+    
+    func body(content: Content) -> some View {
+        content.background(sizeView)
+    }
+}
+
+struct ParentSizeModifier: ViewModifier {
+    private var sizeView: some View {
+        GeometryReader { geometry in
+            Color.clear.transformPreference(CalendarSizePreferenceKey.self, {$0.right = geometry.size})
+        }
+    }
+    
+    func body(content: Content) -> some View {
+        content.background(sizeView)
     }
 }
 
 struct CalendarView: View {
+    @State var size: CGSize = .zero
+    @State var offset: CGFloat = 0
+    
     var body: some View {
-        VStack(spacing: 0) {
+        LazyVStack(alignment: .leading, spacing: 0) {
             ForEach(Date().thisWeek()) { date in
                 HStack {
                     Text("\(date.day)")
@@ -32,21 +70,26 @@ struct CalendarView: View {
                         .frame(width: 50)
                         .padding(.leading)
                         .lineLimit(1)
-                    
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack {
-                            ForEach((0..<3)) { i in
-                                    SmallCardView()
-                                        //.stacked(at: i, total: 3, space: .named("calendarRow"))
-                                }
+                        .modifier(ParentSizeModifier())
+
+                        HStack(spacing: 0) {
+                            ForEach((0..<4)) { i in
+                                SmallCardView()
+                                    .modifier(ChildSizeModifier())
+                                    .offset(x: i > 0 ? (offset * CGFloat(i)) : 0)
+                                    .zIndex(-Double(i))
+                            }
                         }
                         .padding(.vertical)
-                    }
-                    .offset(x: -15)
-                    .coordinateSpace(name: "calendarRow")
+                }
+                .onPreferenceChange(CalendarSizePreferenceKey.self) { value in
+                    let width = UIScreen.main.bounds.width - value.right.width
+                    let diff = width - (value.left.width*4)
+                    offset = diff / 3
                 }
             }
         }
+        .frame(maxHeight: .infinity)
     }
 }
 
