@@ -9,12 +9,14 @@
 import SwiftUI
 
 struct ProfileHeaderView: View {
+    let screen = UIScreen.main.bounds
+    
     var body: some View {
         VStack(spacing: 10) {
             Image("profile_pic")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                .frame(width: 100, height: 100)
+                .frame(width: screen.width/4, height: screen.width/4)
                 .clipShape(Circle())
                 .clipped()
             
@@ -44,7 +46,6 @@ struct ProfileHeaderView: View {
                             .foregroundColor(.gray)
                     }
                     .frame(width: 75)
-                    .layoutPriority(1)
                     
                     Divider()
                         .frame(maxHeight: 25)
@@ -86,7 +87,7 @@ struct ProfileHeaderView: View {
             Text("Follow me on Instagram for a surprise!")
                 .font(.callout)
                 .fontWeight(.light)
-                .padding(.top)
+                .padding(.vertical)
         }
         .padding(.horizontal)
         .padding(.top)

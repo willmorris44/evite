@@ -13,6 +13,9 @@ struct EViteApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+            //scrollviewtest()
+            //Test()
+            //IDBUG()
         }
     }
 }

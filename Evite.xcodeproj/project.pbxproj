@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		56DAA32125001AC600A17195 /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DAA32025001AC600A17195 /* Color+.swift */; };
 		E412DC412517E47400631177 /* ProfileButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E412DC402517E47400631177 /* ProfileButtonStyle.swift */; };
 		E412DC452517EBF300631177 /* NavAndTabExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E412DC442517EBF300631177 /* NavAndTabExtensions.swift */; };
+		E42A6D2A251E606400B562CB /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = E42A6D29251E606400B562CB /* Introspect */; };
 		E46675862517F2A30040A101 /* ProfileSegmentedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46675852517F2A30040A101 /* ProfileSegmentedController.swift */; };
 		E466758B25190D360040A101 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E466758A25190D360040A101 /* NotificationView.swift */; };
 		E466758E251914580040A101 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E466758D251914580040A101 /* SearchBar.swift */; };
@@ -29,13 +30,14 @@
 		E4D990D024F593E9001B1C76 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4D990CF24F593E9001B1C76 /* Preview Assets.xcassets */; };
 		E4D990D324F593E9001B1C76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4D990D124F593E9001B1C76 /* LaunchScreen.storyboard */; };
 		E4D990DB24FD75CE001B1C76 /* SmallCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D990DA24FD75CE001B1C76 /* SmallCardView.swift */; };
-		E4D990E124FEEDB6001B1C76 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D990E024FEEDB6001B1C76 /* ProfileView.swift */; };
 		E4D990E324FEEDD2001B1C76 /* CreateEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D990E224FEEDD2001B1C76 /* CreateEventView.swift */; };
 		E4D990E524FEEDE5001B1C76 /* MainFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D990E424FEEDE5001B1C76 /* MainFeedView.swift */; };
 		E4D990E724FEEE75001B1C76 /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D990E624FEEE75001B1C76 /* NotificationsView.swift */; };
 		E4D990E924FEEEB0001B1C76 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D990E824FEEEB0001B1C76 /* SearchView.swift */; };
 		E4D990EB250EDA0A001B1C76 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D990EA250EDA0A001B1C76 /* ProfileHeaderView.swift */; };
 		E4D990EF250EDB84001B1C76 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D990EE250EDB84001B1C76 /* CalendarView.swift */; };
+		E4FAAABC251F0002008BCC68 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FAAABB251F0002008BCC68 /* ProfileView.swift */; };
+		E4FAAAC4251F1C39008BCC68 /* PagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FAAAC3251F1C39008BCC68 /* PagerView.swift */; };
 		E4FB335C2511202900717EC6 /* StoryCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FB335B2511202900717EC6 /* StoryCardView.swift */; };
 /* End PBXBuildFile section */
 
@@ -64,13 +66,14 @@
 		E4D990D224F593E9001B1C76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E4D990D424F593E9001B1C76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4D990DA24FD75CE001B1C76 /* SmallCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallCardView.swift; sourceTree = "<group>"; };
-		E4D990E024FEEDB6001B1C76 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		E4D990E224FEEDD2001B1C76 /* CreateEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventView.swift; sourceTree = "<group>"; };
 		E4D990E424FEEDE5001B1C76 /* MainFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFeedView.swift; sourceTree = "<group>"; };
 		E4D990E624FEEE75001B1C76 /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
 		E4D990E824FEEEB0001B1C76 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		E4D990EA250EDA0A001B1C76 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		E4D990EE250EDB84001B1C76 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		E4FAAABB251F0002008BCC68 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		E4FAAAC3251F1C39008BCC68 /* PagerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagerView.swift; sourceTree = "<group>"; };
 		E4FB335B2511202900717EC6 /* StoryCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E42A6D2A251E606400B562CB /* Introspect in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +123,7 @@
 				E466759325192EA70040A101 /* SettingsRowView.swift */,
 				E4667599251A6C870040A101 /* StoryView.swift */,
 				E466759E251A70E90040A101 /* MapView.swift */,
+				E4FAAAC3251F1C39008BCC68 /* PagerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -158,7 +163,7 @@
 				E4D990E824FEEEB0001B1C76 /* SearchView.swift */,
 				E4D990E224FEEDD2001B1C76 /* CreateEventView.swift */,
 				E4D990E624FEEE75001B1C76 /* NotificationsView.swift */,
-				E4D990E024FEEDB6001B1C76 /* ProfileView.swift */,
+				E4FAAABB251F0002008BCC68 /* ProfileView.swift */,
 			);
 			name = TabBarViews;
 			sourceTree = "<group>";
@@ -227,6 +232,9 @@
 			dependencies = (
 			);
 			name = Evite;
+			packageProductDependencies = (
+				E42A6D29251E606400B562CB /* Introspect */,
+			);
 			productName = Evite;
 			productReference = E4D990C324F593E5001B1C76 /* Evite.app */;
 			productType = "com.apple.product-type.application";
@@ -255,6 +263,9 @@
 				Base,
 			);
 			mainGroup = E4D990BA24F593E5001B1C76;
+			packageReferences = (
+				E42A6D28251E606400B562CB /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
+			);
 			productRefGroup = E4D990C424F593E5001B1C76 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -282,6 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4FAAAC4251F1C39008BCC68 /* PagerView.swift in Sources */,
 				56DAA31F250013BE00A17195 /* Icons.swift in Sources */,
 				56DAA32125001AC600A17195 /* Color+.swift in Sources */,
 				56DAA31924F59CF900A17195 /* DateFormatter+.swift in Sources */,
@@ -302,10 +314,10 @@
 				56DAA31524F59BB400A17195 /* BigCardView.swift in Sources */,
 				E4D990E324FEEDD2001B1C76 /* CreateEventView.swift in Sources */,
 				E4D990E924FEEEB0001B1C76 /* SearchView.swift in Sources */,
+				E4FAAABC251F0002008BCC68 /* ProfileView.swift in Sources */,
 				E466759F251A70E90040A101 /* MapView.swift in Sources */,
 				E4D990E524FEEDE5001B1C76 /* MainFeedView.swift in Sources */,
 				E412DC452517EBF300631177 /* NavAndTabExtensions.swift in Sources */,
-				E4D990E124FEEDB6001B1C76 /* ProfileView.swift in Sources */,
 				56DAA31B24F5A10300A17195 /* User.swift in Sources */,
 				E46675862517F2A30040A101 /* ProfileSegmentedController.swift in Sources */,
 				E4D990E724FEEE75001B1C76 /* NotificationsView.swift in Sources */,
@@ -502,6 +514,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E42A6D28251E606400B562CB /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E42A6D29251E606400B562CB /* Introspect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E42A6D28251E606400B562CB /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
+			productName = Introspect;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E4D990BB24F593E5001B1C76 /* Project object */;
 }

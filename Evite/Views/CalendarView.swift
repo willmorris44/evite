@@ -28,8 +28,6 @@ class CGSizeEQ: Equatable {
     static func == (lhs: CGSizeEQ, rhs: CGSizeEQ) -> Bool {
         return lhs.left == rhs.left && lhs.right == rhs.right
     }
-    
-    
 }
 
 struct ChildSizeModifier: ViewModifier {
@@ -85,7 +83,7 @@ struct CalendarView: View {
                 .onPreferenceChange(CalendarSizePreferenceKey.self) { value in
                     let width = UIScreen.main.bounds.width - value.right.width
                     let diff = width - (value.left.width*4)
-                    offset = diff / 3
+                    withAnimation(.easeIn) {offset = diff / 3}
                 }
             }
         }
