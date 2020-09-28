@@ -88,6 +88,8 @@ struct ProfileView: View {
                                             reader.scrollTo(2, anchor: UnitPoint(x: 0, y: point))
                                         }
                                     })
+//                                CalendarView()
+//                                    .padding(.top)
                                 BigCardView()
                                     .padding(.top)
                                 BigCardView()
@@ -145,28 +147,30 @@ struct ProfileView: View {
                             .modifier(SegSizeModifier())
 
                         }
-                        //.background(Color.white)
+                        .background(Color.white)
                         .offset(y: headerOffset)
                         
                         Spacer()
                     }
                 }
-//                .navigationBarItems(trailing: Button(action: {
-//                    showSettings = true
-//                }, label: {
-//                    Icons.elipses.image
-//                        .font(.headline)
-//                        .frame(width: 50, height: 30)
-//                        .foregroundColor(.black)
-//                }))
             }
             .coordinateSpace(name: "ProfileScreen")
             .navigationBarTitle("Profile", displayMode: .inline)
+//            .navigationBarItems(trailing: Button(action: {
+//                showSettings = true
+//            }, label: {
+//                Icons.elipses.image
+//                    .font(.headline)
+//                    .frame(width: 50, height: 30)
+//                    .foregroundColor(.black)
+//            }))
             
         }.onPreferenceChange(HeaderSizePreferenceKey.self) { value in
+            print("HeaderKey: \(value)")
             headerSize = value
         }
         .onPreferenceChange(SegSizePreferenceKey.self) { value in
+            print("SegKey: \(value)")
             segSize = value
         }
     }
