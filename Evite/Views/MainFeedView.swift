@@ -25,29 +25,16 @@ struct MainFeedView: View {
                         .padding(.top)
                         
                         ScrollView(.horizontal, showsIndicators: false) {
-                            if #available(iOS 14.0, *) {
-                                LazyHStack(spacing: 20) {
-                                    StoryCardView(newPost: true)
-                                    StoryCardView()
-                                    StoryCardView(newPost: true)
-                                    StoryCardView(newPost: true)
-                                    StoryCardView()
-                                }
-                                .padding(.horizontal)
-                                .padding(.bottom)
-                                .padding(.top, 4)
-                            } else {
-                                HStack(spacing: 20) {
-                                    StoryCardView(newPost: true)
-                                    StoryCardView()
-                                    StoryCardView(newPost: true)
-                                    StoryCardView(newPost: true)
-                                    StoryCardView()
-                                }
-                                .padding(.horizontal)
-                                .padding(.bottom)
-                                .padding(.top, 4)
+                            LazyHStack(spacing: 20) {
+                                StoryCardView(newPost: true)
+                                StoryCardView()
+                                StoryCardView(newPost: true)
+                                StoryCardView(newPost: true)
+                                StoryCardView()
                             }
+                            .padding(.horizontal)
+                            .padding(.bottom)
+                            .padding(.top, 4)
                         }
                         
                         HStack {
@@ -58,22 +45,12 @@ struct MainFeedView: View {
                         }
                         .padding(.horizontal)
                         
-                        if #available(iOS 14.0, *) {
-                            LazyVStack {
-                                BigCardView()
-                                BigCardView()
-                                BigCardView()
-                                BigCardView()
-                                BigCardView()
-                            }
-                        } else {
-                            VStack {
-                                BigCardView()
-                                BigCardView()
-                                BigCardView()
-                                BigCardView()
-                                BigCardView()
-                            }
+                        LazyVStack {
+                            BigCardView()
+                            BigCardView()
+                            BigCardView()
+                            BigCardView()
+                            BigCardView()
                         }
                     }
                 }

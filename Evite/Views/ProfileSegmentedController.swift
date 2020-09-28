@@ -25,7 +25,7 @@ struct ProfileSegmentedController: View {
         VStack(alignment: .myhAlignment) {
             HStack(alignment: .top) {
                 VStack {
-                    if selected == 0 {
+                   // if selected == 0 {
                         Button(action: {
                             withAnimation(.spring()) { selected = 0 }
                         }, label: {
@@ -33,24 +33,24 @@ struct ProfileSegmentedController: View {
                                 .frame(width: 30, height: 30)
                                 .foregroundColor((selected == 0) ? .black : .gray)
                         })
-                        .alignmentGuide(.myhAlignment, computeValue: { d in
+                        .alignmentGuide(selected == 0 ? .myhAlignment : HorizontalAlignment.center, computeValue: { d in
                             return d[HorizontalAlignment.center]
                         })
-                    } else {
-                        Button(action: {
-                            withAnimation(.spring()) { selected = 0 }
-                        }, label: {
-                            Icons.calendar.image
-                                .frame(width: 30, height: 30)
-                                .foregroundColor((selected == 0) ? .black : .gray)
-                        })
-                    }
+//                    } else {
+//                        Button(action: {
+//                            withAnimation(.spring()) { selected = 0 }
+//                        }, label: {
+//                            Icons.calendar.image
+//                                .frame(width: 30, height: 30)
+//                                .foregroundColor((selected == 0) ? .black : .gray)
+//                        })
+//                    }
                 }
                 
                 Spacer()
                 
                 VStack {
-                    if selected == 1 {
+                   // if selected == 1 {
                         Button(action: {
                             withAnimation(.spring()) { selected = 1 }
                         }, label: {
@@ -58,18 +58,18 @@ struct ProfileSegmentedController: View {
                                 .frame(width: 30, height: 30)
                                 .foregroundColor((selected == 1) ? .black : .gray)
                         })
-                        .alignmentGuide(.myhAlignment, computeValue: { d in
+                        .alignmentGuide(selected == 1 ? .myhAlignment : HorizontalAlignment.center, computeValue: { d in
                             return d[HorizontalAlignment.center]
                         })
-                    } else {
-                        Button(action: {
-                            withAnimation(.spring()) { selected = 1 }
-                        }, label: {
-                            Image(systemName: "list.dash")
-                                .frame(width: 30, height: 30)
-                                .foregroundColor((selected == 1) ? .black : .gray)
-                        })
-                    }
+//                    } else {
+//                        Button(action: {
+//                            withAnimation(.spring()) { selected = 1 }
+//                        }, label: {
+//                            Image(systemName: "list.dash")
+//                                .frame(width: 30, height: 30)
+//                                .foregroundColor((selected == 1) ? .black : .gray)
+//                        })
+//                    }
                 }
             }
             .padding(.horizontal, 75)
@@ -80,7 +80,6 @@ struct ProfileSegmentedController: View {
                 .alignmentGuide(.myhAlignment, computeValue: { d in
                     return d[HorizontalAlignment.center]
                 })
-                .animation(.spring())
         }
     }
 }
