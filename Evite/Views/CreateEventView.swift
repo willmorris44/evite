@@ -75,14 +75,6 @@ struct CreateEventView: View {
             }
             .padding(.vertical)
             .navigationBarTitle("Create", displayMode: .inline)
-            .navigationBarItems(trailing: Button(action: {
-                // todo
-            }, label: {
-                Image(systemName: "plus")
-                    .foregroundColor(.secondary)
-                    .font(.headline)
-                    .frame(width: 50, height: 30)
-            }))
         }
         .fullScreenCover(isPresented: $mapIsPresented, content: MapView.init)
     }

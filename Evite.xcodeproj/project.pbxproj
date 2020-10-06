@@ -16,6 +16,8 @@
 		E412DC412517E47400631177 /* ProfileButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E412DC402517E47400631177 /* ProfileButtonStyle.swift */; };
 		E412DC452517EBF300631177 /* NavAndTabExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E412DC442517EBF300631177 /* NavAndTabExtensions.swift */; };
 		E42A6D2A251E606400B562CB /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = E42A6D29251E606400B562CB /* Introspect */; };
+		E43FEAF425265A0E00996EBA /* TempDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43FEAF325265A0E00996EBA /* TempDataService.swift */; };
+		E43FEAF7252CC7BE00996EBA /* InviteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43FEAF6252CC7BD00996EBA /* InviteViewModel.swift */; };
 		E46675862517F2A30040A101 /* ProfileSegmentedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46675852517F2A30040A101 /* ProfileSegmentedController.swift */; };
 		E466758B25190D360040A101 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E466758A25190D360040A101 /* NotificationView.swift */; };
 		E466758E251914580040A101 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E466758D251914580040A101 /* SearchBar.swift */; };
@@ -38,6 +40,7 @@
 		E4D990EF250EDB84001B1C76 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D990EE250EDB84001B1C76 /* CalendarView.swift */; };
 		E4FAAABC251F0002008BCC68 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FAAABB251F0002008BCC68 /* ProfileView.swift */; };
 		E4FAAAC4251F1C39008BCC68 /* PagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FAAAC3251F1C39008BCC68 /* PagerView.swift */; };
+		E4FAAACC2522AF23008BCC68 /* MapService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FAAACB2522AF22008BCC68 /* MapService.swift */; };
 		E4FB335C2511202900717EC6 /* StoryCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FB335B2511202900717EC6 /* StoryCardView.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +53,8 @@
 		56DAA32025001AC600A17195 /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
 		E412DC402517E47400631177 /* ProfileButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileButtonStyle.swift; sourceTree = "<group>"; };
 		E412DC442517EBF300631177 /* NavAndTabExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavAndTabExtensions.swift; sourceTree = "<group>"; };
+		E43FEAF325265A0E00996EBA /* TempDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempDataService.swift; sourceTree = "<group>"; };
+		E43FEAF6252CC7BD00996EBA /* InviteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InviteViewModel.swift; path = Evite/Helpers/InviteViewModel.swift; sourceTree = SOURCE_ROOT; };
 		E46675852517F2A30040A101 /* ProfileSegmentedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSegmentedController.swift; sourceTree = "<group>"; };
 		E466758A25190D360040A101 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		E466758D251914580040A101 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
@@ -74,6 +79,7 @@
 		E4D990EE250EDB84001B1C76 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		E4FAAABB251F0002008BCC68 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		E4FAAAC3251F1C39008BCC68 /* PagerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagerView.swift; sourceTree = "<group>"; };
+		E4FAAACB2522AF22008BCC68 /* MapService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapService.swift; sourceTree = "<group>"; };
 		E4FB335B2511202900717EC6 /* StoryCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,6 +137,7 @@
 		56DAA31124F5988A00A17195 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				E43FEAF6252CC7BD00996EBA /* InviteViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -152,6 +159,8 @@
 				56DAA32025001AC600A17195 /* Color+.swift */,
 				E492956C25129C2C00622DB5 /* CalendarHelper.swift */,
 				E412DC442517EBF300631177 /* NavAndTabExtensions.swift */,
+				E4FAAACB2522AF22008BCC68 /* MapService.swift */,
+				E43FEAF325265A0E00996EBA /* TempDataService.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -315,8 +324,11 @@
 				E4D990E324FEEDD2001B1C76 /* CreateEventView.swift in Sources */,
 				E4D990E924FEEEB0001B1C76 /* SearchView.swift in Sources */,
 				E4FAAABC251F0002008BCC68 /* ProfileView.swift in Sources */,
+				E4FAAACC2522AF23008BCC68 /* MapService.swift in Sources */,
 				E466759F251A70E90040A101 /* MapView.swift in Sources */,
 				E4D990E524FEEDE5001B1C76 /* MainFeedView.swift in Sources */,
+				E43FEAF7252CC7BE00996EBA /* InviteViewModel.swift in Sources */,
+				E43FEAF425265A0E00996EBA /* TempDataService.swift in Sources */,
 				E412DC452517EBF300631177 /* NavAndTabExtensions.swift in Sources */,
 				56DAA31B24F5A10300A17195 /* User.swift in Sources */,
 				E46675862517F2A30040A101 /* ProfileSegmentedController.swift in Sources */,

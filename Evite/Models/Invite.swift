@@ -17,14 +17,14 @@ struct Invite: Codable {
     }
     
     let uuid: UUID
-    let owner: User
+    let host: User
     let title: String
     let date: DateInterval
-    let rewardPoints: Int
-    let address: String
-    let mutuals: [User]
-    let atendees: [User]
-    let dateCreated: Date
-    let isPrivate: Bool
-    let state: State
+    var rewardPoints: Int
+    var address: String
+    var mutuals: [User]
+    var atendees: [User]
+    var dateCreated: Date
+    var isPrivate: Bool
+    var state: State
 }

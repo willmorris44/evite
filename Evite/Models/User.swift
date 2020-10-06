@@ -9,13 +9,15 @@
 import Foundation
 
 struct User: Codable {
-    
     let id: String
     let displayName: String
     let email: String?
     let phone: String?
-    let createdInvites: [Invite]
-    let acceptedInvite: [Invite]
-    let pendingInvites: [Invite]
-    let declinedInvites: [Invite]
+    var createdInvites: [Invite]
+    var acceptedInvite: [Invite]
+    var pendingInvites: [Invite]
+    var declinedInvites: [Invite]
+    var followers: [User]
+    var following: [User]
+    var points: Int
 }
